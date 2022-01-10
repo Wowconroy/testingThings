@@ -52,22 +52,25 @@ public class MainSome {
                 .min(Comparator.comparing(Person::getAge))
                 .ifPresent(System.out::println);
 
-//        // Group
-//        Map<Gender, List<Person>> groupByGender = people.stream()
-//                .collect(Collectors.groupingBy(Person::getGender));
-//
-////    groupByGender.forEach((gender, people1) -> {
-////      System.out.println(gender);
-////      people1.forEach(System.out::println);
-////      System.out.println();
-////    });
-//
-//        Optional<String> oldestFemaleAge = people.stream()
-//                .filter(person -> person.getGender().equals(Gender.FEMALE))
-//                .max(Comparator.comparing(Person::getAge))
-//                .map(Person::getName);
-//
-//        oldestFemaleAge.ifPresent(System.out::println);
+// ----------------------------------
+        // Group
+        Map<Gender, List<Person>> groupByGender = people.stream()
+                .collect(Collectors.groupingBy(Person::getGender));
+
+        groupByGender.forEach((gender, people1) -> {
+            System.out.println(gender);
+            people1.forEach(System.out::println);
+            System.out.println();
+        });
+
+// ----------------------------------
+
+        Optional<String> oldestFemaleAge = people.stream()
+                .filter(person -> person.getGender().equals(Gender.FEMALE))
+                .max(Comparator.comparing(Person::getAge))
+                .map(Person::getName);
+
+        oldestFemaleAge.ifPresent(System.out::println);
     }
 
     private static List<Person> getPeople() {
