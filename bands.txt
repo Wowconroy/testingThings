@@ -1,5 +1,3 @@
-ABBA
-AC/DC
 Aerosmith
 The Allman Brothers Band
 Amadou and Mariam
@@ -10,61 +8,3 @@ The Band
 The Beach Boys
 The Beastie Boys
 The Beatles
-The Bee Gees
-Big Star
-Black Flag
-Black Sabbath
-Blondie
-Booker T. and the MG’s
-Boston
-The Boswell Sisters
-Boyz II Men
-Brooks & Dunn
-Buffalo Springfield
-The Byrds
-Calle 13
-The Chemical Brothers
-Chicago
-The Clash
-The Coasters
-Coldplay
-Alice Cooper
-Cream
-Creedence Clearwater Revival
-Crosby, Stills & Nash
-Daft Punk
-De La Soul
-Death Cab for Cutie
-The Decemberists
-Def Leppard
-Devo
-The Dillards
-Dion and the Belmonts
-Dire Straits
-Dixie Chicks
-The Doors
-The Drifters
-The Eagles
-Earth, Wind & Fire
-Emerson Lake & Palmer
-The Everly Brothers
-The Flamingos
-Fleetwood Mac
-The Flying Burrito Brothers
-The Four Seasons
-The Four Tops
-Fugazi
-The Gang of Four
-Genesis
-Grandmaster Flash and the Furious Five
-The Grateful Dead
-Green Day
-Guns N’ Roses
-The Hollies
-Iggy and the Stooges
-The Ink Spots
-The Isley Brothers
-The Jam
-The Jefferson Airplane
-The Jesus and Mary Chain
-Jonas Brothers
