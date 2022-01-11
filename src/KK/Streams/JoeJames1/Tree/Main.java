@@ -6,11 +6,8 @@ import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Begin...");
         String path = "C:/data/temp/DecemberOf23/src/KK/Streams/JoeJames1/xprom";
         printFiles(path, "");
-
-        System.out.println("Done.");
     }
 
     private static void printFiles(String path, String prefix){
