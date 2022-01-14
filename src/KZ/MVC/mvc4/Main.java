@@ -1,5 +1,7 @@
 package KZ.MVC.mvc4;
 
+import KZ.MVC.mvc4.view.UserView;
+
 import javax.swing.*;
 
 public class Main {

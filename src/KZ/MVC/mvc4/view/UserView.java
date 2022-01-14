@@ -1,4 +1,4 @@
-package KZ.MVC.mvc4;
+package KZ.MVC.mvc4.view;
 
 import javax.swing.*;
 import java.awt.*;
