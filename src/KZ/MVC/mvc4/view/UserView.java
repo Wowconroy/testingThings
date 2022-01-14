@@ -22,17 +22,20 @@ public class UserView extends JFrame {
         info = new JLabel("Info");
 
         add(text, BorderLayout.CENTER);
-        add(sendButton, BorderLayout.SOUTH);
+        add(sendButton, BorderLayout.PAGE_END);
         add(info, BorderLayout.NORTH);
 
         sendButton.addActionListener(e -> {
             int pin;
             String textPin = this.text.getText();
+            text.setText("");
+
+            try{
             pin = Integer.parseInt(textPin);
             info.setText("Yes it is. DONE: " + pin + "Waiting...");
 
-
             Thread thread = new Thread(() -> {
+                sendButton.setEnabled(false);
                 boolean result;
                 result = controller.checkPin(pin);
                 String resultMessage;
@@ -42,8 +45,13 @@ public class UserView extends JFrame {
                     resultMessage = "Fuck you!";
                 }
                 info.setText(resultMessage);
+                sendButton.setEnabled(true);
             });
             thread.start();
+            }
+            catch (NumberFormatException ex){
+                info.setText("Only number allowed...");
+            }
         });
         setVisible(true);
     }
