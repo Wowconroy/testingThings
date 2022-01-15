@@ -1,10 +1,9 @@
 package KK.Streams.JoeJames1.Seven;
 
-import java.util.ArrayList;
-import java.util.IntSummaryStatistics;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
+import java.util.stream.DoubleStream;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class Main {
@@ -25,8 +24,12 @@ public class Main {
 //        Map<Boolean, List<Student>> partitionedStudents = list
 //                .stream()
 //                .collect(Collectors.partitioningBy(s-> s.getFirstName().toLowerCase().startsWith("m")));
-        Stream builder = Stream.builder().add("Awesome").add("Reason").build();
-        builder.forEach(System.out::println);
+//        Stream builder = Stream.builder().add("Awesome").add("Reason").build();
+//        builder.forEach(System.out::println);
+        Random random = new Random();
+        DoubleStream doubleStream = random.doubles(5);
+
+
     }
 }
 
