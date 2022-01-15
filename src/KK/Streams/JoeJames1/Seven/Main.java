@@ -3,7 +3,9 @@ package KK.Streams.JoeJames1.Seven;
 import java.util.ArrayList;
 import java.util.IntSummaryStatistics;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Main {
     public static void main(String[] args) {
@@ -14,14 +16,21 @@ public class Main {
         list.add(new Student(3, "Oleksii", "Shostak", 29));
         list.add(new Student(4, "Chris", "Lazy", 31));
 
-        IntSummaryStatistics intSummaryStatistics = list.stream()
-                .collect(Collectors.summarizingInt(Student::getAge));
+//        IntSummaryStatistics intSummaryStatistics = list.stream()
+//                .collect(Collectors.summarizingInt(Student::getAge));
+//        Map<Integer, List<Student>> listMap = list.stream()
+//                .collect(Collectors.groupingBy(Student::getId, Collectors.toList()));
+//        listMap.forEach((k,v) -> System.out.println(k + " -> " + v));
 
-
+//        Map<Boolean, List<Student>> partitionedStudents = list
+//                .stream()
+//                .collect(Collectors.partitioningBy(s-> s.getFirstName().toLowerCase().startsWith("m")));
+        Stream builder = Stream.builder().add("Awesome").add("Reason").build();
+        builder.forEach(System.out::println);
     }
 }
 
-class Student{
+class Student {
     private int id;
     private String firstName;
     private String secondName;
@@ -34,7 +43,29 @@ class Student{
         this.age = age;
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
     public int getAge() {
         return age;
+    }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "id=" + id +
+                ", firstName='" + firstName + '\'' +
+                ", secondName='" + secondName + '\'' +
+                ", age=" + age +
+                '}';
     }
 }
