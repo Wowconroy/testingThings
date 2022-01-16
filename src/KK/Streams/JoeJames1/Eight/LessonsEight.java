@@ -13,9 +13,17 @@ public class LessonsEight {
         String [] arrString = tokenStream.toArray(String[]::new);
         System.out.println(Arrays.toString(arrString));
 
+
         IntStream infiniteNumberStream = IntStream.iterate(1, i -> i+1);
         int[] intArray = infiniteNumberStream.limit(10)
                 .toArray();
         System.out.println(Arrays.toString(intArray));
+
+
+        IntStream infiniteNumberStream2 = IntStream.iterate(1, i -> i+1);
+        Integer[] integerArray = infiniteNumberStream2.limit(10)
+                .boxed()
+                .toArray(Integer[]::new);
+        System.out.println(Arrays.toString(integerArray));
     }
 }
