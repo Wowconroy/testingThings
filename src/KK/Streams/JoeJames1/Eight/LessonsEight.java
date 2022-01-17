@@ -1,8 +1,7 @@
 package KK.Streams.JoeJames1.Eight;
 
-import java.util.Arrays;
-import java.util.Comparator;
-import java.util.Random;
+import java.util.*;
+import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
@@ -59,6 +58,14 @@ public class LessonsEight {
         Stream.of(1, 2, 3, 4, 2, 5)
                 .takeWhile(x -> x < 3)
                 .forEach(System.out::println);
+
+        Stream.of(1, 2, 7, 4, 2, 5)
+                .dropWhile(x -> x >= 2)
+                .forEach(System.out::println);
+
+        List <String> list = Stream.of("a", "b", "c", "d")
+                .collect(ArrayList::new, ArrayList::add, ArrayList::addAll);
+        System.out.println(list);
 
     }
 }
