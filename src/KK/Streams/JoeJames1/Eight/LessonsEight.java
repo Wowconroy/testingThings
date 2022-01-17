@@ -2,6 +2,7 @@ package KK.Streams.JoeJames1.Eight;
 
 import java.util.Arrays;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 import java.util.stream.Stream;
@@ -25,5 +26,13 @@ public class LessonsEight {
                 .boxed()
                 .toArray(Integer[]::new);
         System.out.println(Arrays.toString(integerArray));
+
+        IntStream intStream = IntStream.generate(() -> new Random().nextInt(100));
+//        int [] arr = intStream.limit(10).toArray();
+//        System.out.println(Arrays.toString(arr));
+        Integer [] bigAmAr = intStream
+                .limit(10).boxed()
+                .toArray(Integer[]::new);
+        System.out.println(Arrays.toString(bigAmAr));
     }
 }
